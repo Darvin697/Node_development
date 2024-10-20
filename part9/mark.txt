@@ -1,0 +1,31 @@
+<h1>This is an about apge</h1>
+
+{{#each values}}  
+
+
+<h1>{{@index}}. {{this}}</h1>
+
+
+
+{{/each}}
+
+
+this if for the loop
+
+
+const person={name:"Thomas",comments:{comment:'This is a sample comment',date:'10-11-2000'}}
+
+
+
+if cases are write like this 
+<h1>Test for the if case </h1>
+
+{{#if person.admin}}
+
+<h1>This is the admin page </h1>
+
+{{else}}
+
+<h1>This is the normal page</h1>
+
+{{/if}}
