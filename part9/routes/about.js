@@ -1,12 +1,24 @@
 var express=require('express')
 var router = express.Router()
+var MongoClient=require('mongodb').MongoClient
 
-const values =['Darvin','Thomas','Johny','Shibu'] 
 
-const person={name:"Thomas",comments:{comment:'This is a sample commet',date:'4-12-1000'}}
+
+
 
 router.get('/',function (req,res,next){
-    res.render('about',{person})
+    res.sendFile('about',)})
+
+router.post('/submit',function (req,res,next){
+    console.log(req.body)
+    MongoClient.connect("mongodb://localhost:27017", function(err, db){
+        if(db){
+          console.log("error")
+        }else{
+          console.log("connected")
+        }
+      })
+    res.send('Login')
 })
 
 module.exports=router;
